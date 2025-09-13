@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-900 text-white;
+  font-family: "Inter", sans-serif; /* ép Inter làm mặc định */
+}
+
+/* Thanh cuộn ẩn mặc định, hiện khi hover */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+:hover::-webkit-scrollbar-thumb {
+  background: rgba(160, 160, 160, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(200, 200, 200, 0.8);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+*:hover {
+  scrollbar-color: rgba(160, 160, 160, 0.5) transparent;
+}
+
+input[type="range"] {
+  overscroll-behavior: contain;
+}
